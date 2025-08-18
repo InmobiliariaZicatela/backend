@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_contactos_link_tipos",
+  "info": {
+    "displayName": "link_tipos",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "tipo": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Telefono",
+        "Email",
+        "Direccion",
+        "Whatsapp"
+      ]
+    }
+  },
+  "config": {}
+}

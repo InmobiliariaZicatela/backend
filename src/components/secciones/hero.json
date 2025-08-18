@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_secciones_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "monitor"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "explicacion": {
+      "type": "string",
+      "required": true
+    },
+    "texto_persuasivo": {
+      "type": "string",
+      "required": true
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_secciones_ultima_llamadas",
+  "info": {
+    "displayName": "ultima_llamada",
+    "icon": "message"
+  },
+  "options": {},
+  "attributes": {
+    "frase": {
+      "type": "text",
+      "required": true
+    },
+    "titulo": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

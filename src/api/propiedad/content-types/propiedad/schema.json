@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "propiedads",
+  "info": {
+    "singularName": "propiedad",
+    "pluralName": "propiedads",
+    "displayName": "Propiedad"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "direccion": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "precio": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "precio_2": {
+      "type": "integer",
+      "min": 0
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "imagenes": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "caracteristicas": {
+      "type": "component",
+      "component": "caracteristicas.caracteristica",
+      "repeatable": true,
+      "required": true
+    },
+    "coordenadas_mapa": {
+      "type": "string",
+      "required": true
+    },
+    "encabezado": {
+      "type": "component",
+      "component": "secciones.encabezado",
+      "repeatable": false,
+      "required": true
+    },
+    "colonia": {
+      "type": "component",
+      "component": "colonias.colonia",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}

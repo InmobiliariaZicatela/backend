@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_secciones_contactos",
+  "info": {
+    "displayName": "contacto",
+    "icon": "envelop"
+  },
+  "options": {},
+  "attributes": {
+    "texto_superior": {
+      "type": "string",
+      "required": true
+    },
+    "texto_inferior": {
+      "type": "string",
+      "required": true
+    },
+    "contactos": {
+      "type": "component",
+      "component": "contactos.link-contacto",
+      "repeatable": true,
+      "required": true,
+      "max": 4
+    }
+  },
+  "config": {}
+}

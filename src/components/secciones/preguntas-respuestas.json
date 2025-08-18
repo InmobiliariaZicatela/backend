@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_secciones_preguntas_respuestas",
+  "info": {
+    "displayName": "preguntas_respuestas",
+    "icon": "lightbulb"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "preguntas_respuestas": {
+      "type": "component",
+      "component": "preguntas-respuestas.pregunta-respuesta",
+      "repeatable": true,
+      "required": true,
+      "max": 6
+    }
+  },
+  "config": {}
+}

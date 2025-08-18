@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_colonias_colonias",
+  "info": {
+    "displayName": "colonia",
+    "icon": "pin"
+  },
+  "options": {},
+  "attributes": {
+    "nombre": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Barra de Colotepec",
+        "Barra de Navidad",
+        "Zicatela",
+        "El Puertecito"
+      ]
+    }
+  },
+  "config": {}
+}

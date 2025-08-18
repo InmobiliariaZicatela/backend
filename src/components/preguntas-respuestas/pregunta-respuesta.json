@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_preguntas_respuestas_pregunta_respuestas",
+  "info": {
+    "displayName": "pregunta_respuesta",
+    "icon": "lightbulb"
+  },
+  "options": {},
+  "attributes": {
+    "pregunta": {
+      "type": "text",
+      "required": true
+    },
+    "respuesta": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}

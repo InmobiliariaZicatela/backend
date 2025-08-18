@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contactos_links",
+  "info": {
+    "displayName": "links",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "texto_link": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

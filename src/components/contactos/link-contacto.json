@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_contactos_link_contactos",
+  "info": {
+    "displayName": "contacto",
+    "icon": "link"
+  },
+  "options": {},
+  "attributes": {
+    "texto": {
+      "type": "string",
+      "required": true
+    },
+    "disponibilidad": {
+      "type": "text",
+      "required": true
+    },
+    "tipo": {
+      "type": "component",
+      "component": "contactos.link-tipos",
+      "repeatable": false,
+      "required": true
+    },
+    "links": {
+      "type": "component",
+      "component": "contactos.links",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    }
+  },
+  "config": {}
+}

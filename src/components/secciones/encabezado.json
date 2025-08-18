@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_secciones_encabezados",
+  "info": {
+    "displayName": "encabezado",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "titulo": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "puntos": {
+      "type": "component",
+      "component": "listas.lista",
+      "repeatable": true,
+      "required": false
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}

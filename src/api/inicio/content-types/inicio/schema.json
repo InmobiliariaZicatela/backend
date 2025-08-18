@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inicios",
+  "info": {
+    "singularName": "inicio",
+    "pluralName": "inicios",
+    "displayName": "Inicio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "component": "secciones.hero",
+      "repeatable": false,
+      "required": true
+    },
+    "caracteristicas": {
+      "type": "component",
+      "component": "caracteristicas.caracteristica",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    },
+    "quienes_somos": {
+      "type": "component",
+      "component": "secciones.encabezado",
+      "repeatable": false,
+      "required": true
+    },
+    "Testimonios": {
+      "type": "component",
+      "component": "testimonios.testimonio",
+      "repeatable": true,
+      "required": true,
+      "max": 3
+    },
+    "Contacto": {
+      "type": "component",
+      "component": "secciones.contacto",
+      "repeatable": false,
+      "required": true
+    },
+    "preguntas_respuestas": {
+      "type": "component",
+      "component": "secciones.preguntas-respuestas",
+      "repeatable": false,
+      "required": true
+    },
+    "ultima_llamada": {
+      "type": "component",
+      "component": "secciones.ultima-llamada",
+      "repeatable": false,
+      "required": true
+    }
+  }
+}
