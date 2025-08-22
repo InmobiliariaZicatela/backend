@@ -1,0 +1,41 @@
+{
+  "name": "inmobiliariazicatela-backend",
+  "description": "Backend API for Inmobiliaria Zicatela",
+  "repository": "https://github.com/yourusername/inmobiliariazicatela-backend",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": ["node", "strapi", "api", "real-estate"],
+  "addons": [
+    {
+      "plan": "heroku-postgresql:essential-0"
+    }
+  ],
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment for the application",
+      "value": "production"
+    },
+    "DATABASE_CLIENT": {
+      "description": "Database client to use",
+      "value": "postgres"
+    },
+    "DATABASE_SSL": {
+      "description": "Enable SSL for database connection",
+      "value": "true"
+    },
+    "DATABASE_SSL_REJECT_UNAUTHORIZED": {
+      "description": "Reject unauthorized SSL connections",
+      "value": "false"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

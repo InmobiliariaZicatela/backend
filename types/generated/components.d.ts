@@ -20,7 +20,13 @@ export interface ColoniasColonia extends Struct.ComponentSchema {
   };
   attributes: {
     nombre: Schema.Attribute.Enumeration<
-      ['Barra de Colotepec', 'Barra de Navidad', 'Zicatela', 'El Puertecito']
+      [
+        'Barra de Colotepec',
+        'Barra de Navidad',
+        'Zicatela',
+        'El Puertecito',
+        'El Tomatal',
+      ]
     > &
       Schema.Attribute.Required;
   };

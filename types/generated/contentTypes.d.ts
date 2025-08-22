@@ -498,6 +498,11 @@ export interface ApiPropiedadPropiedad extends Struct.CollectionTypeSchema {
     direccion: Schema.Attribute.String & Schema.Attribute.Required;
     encabezado: Schema.Attribute.Component<'secciones.encabezado', false> &
       Schema.Attribute.Required;
+    estatus: Schema.Attribute.Enumeration<
+      ['Vendido', 'Apartado', 'Disponible']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Disponible'>;
     imagenes: Schema.Attribute.Media<'images', true> &
       Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

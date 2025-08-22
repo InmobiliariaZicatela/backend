@@ -69,6 +69,16 @@
       "component": "colonias.colonia",
       "repeatable": false,
       "required": true
+    },
+    "estatus": {
+      "type": "enumeration",
+      "required": true,
+      "default": "Disponible",
+      "enum": [
+        "Vendido",
+        "Apartado",
+        "Disponible"
+      ]
     }
   }
 }
