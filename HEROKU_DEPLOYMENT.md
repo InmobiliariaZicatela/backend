@@ -41,7 +41,7 @@ heroku addons:create heroku-postgresql:essential-0
 heroku config:get DATABASE_URL
 ```
 
-**Note**: The old free "mini" plan has been discontinued. The new "essential-0" plan costs approximately $5/month, which is the most affordable option available.
+**⚠️ Important Note**: The old free "mini" plan has been discontinued. The new "essential-0" plan costs approximately $5/month, which is the most affordable option available.
 
 ## Step 5: Set Environment Variables
 
@@ -81,12 +81,14 @@ git push heroku master
 ## Step 7: Run Database Migrations
 
 ```bash
-# Run Strapi build
-heroku run npm run build
+# Run Strapi build (IMPORTANT: Use quotes!)
+heroku run "npm run build"
 
 # Or run any custom build commands
-heroku run npm run strapi build
+heroku run "npm run strapi build"
 ```
+
+**⚠️ Critical**: Always wrap commands in quotes when using `heroku run`. Without quotes, you'll get the error: `/bin/bash: line 1: run: command not found`
 
 ## Step 8: Open Your App
 
@@ -105,6 +107,43 @@ Your admin panel will be available at:
 ```
 https://your-app-name.herokuapp.com/admin
 ```
+
+## Common Issues & Solutions
+
+### Issue 1: PostgreSQL "mini" Plan Discontinued
+
+**Error**: `The mini plan has reached end-of-life`
+
+**Solution**: Use `heroku-postgresql:essential-0` instead (costs ~$5/month)
+
+### Issue 2: Node.js Version Compatibility
+
+**Error**: `npm ERR! engine Unsupported engine`
+
+**Solution**: Update `package.json` engines section:
+
+```json
+"engines": {
+  "node": "20.x",
+  "npm": "10.x"
+}
+```
+
+### Issue 3: Heroku Run Command Syntax
+
+**Error**: `/bin/bash: line 1: run: command not found`
+
+**Solution**: Always use quotes: `heroku run "npm run build"`
+
+### Issue 4: Database Connection Issues
+
+**Error**: Database connection failures
+
+**Solution**: Ensure these environment variables are set:
+
+- `DATABASE_CLIENT=postgres`
+- `DATABASE_SSL=true`
+- `DATABASE_SSL_REJECT_UNAUTHORIZED=false`
 
 ## Troubleshooting
 
@@ -134,6 +173,13 @@ heroku pg:info
 
 # Reset database if needed
 heroku pg:reset DATABASE_URL
+```
+
+### Force Specific Node.js Version
+
+```bash
+# If you need a specific Node.js version
+heroku config:set NODE_VERSION=20.19.3
 ```
 
 ## Important Notes
@@ -176,3 +222,11 @@ If you want to avoid the $5/month cost, consider:
 3. Set up your API endpoints
 4. Test all functionality
 5. Consider upgrading to paid plan for production use
+
+## Quick Setup Script
+
+Use the included `setup-heroku-env.sh` script to automatically set all environment variables:
+
+```bash
+./setup-heroku-env.sh YOUR_APP_NAME
+```
