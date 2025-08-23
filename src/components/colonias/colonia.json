@@ -7,15 +7,8 @@
   "options": {},
   "attributes": {
     "nombre": {
-      "type": "enumeration",
-      "required": true,
-      "enum": [
-        "Barra de Colotepec",
-        "Barra de Navidad",
-        "Zicatela",
-        "El Puertecito",
-        "El Tomatal"
-      ]
+      "type": "string",
+      "required": true
     }
   },
   "config": {}

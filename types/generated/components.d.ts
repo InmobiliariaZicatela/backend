@@ -19,16 +19,7 @@ export interface ColoniasColonia extends Struct.ComponentSchema {
     icon: 'pin';
   };
   attributes: {
-    nombre: Schema.Attribute.Enumeration<
-      [
-        'Barra de Colotepec',
-        'Barra de Navidad',
-        'Zicatela',
-        'El Puertecito',
-        'El Tomatal',
-      ]
-    > &
-      Schema.Attribute.Required;
+    nombre: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
