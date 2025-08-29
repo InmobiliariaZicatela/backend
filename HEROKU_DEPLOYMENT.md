@@ -73,9 +73,6 @@ git commit -m "Prepare for Heroku deployment"
 
 # Push to Heroku
 git push heroku main
-
-# Or if you're on master branch
-git push heroku master
 ```
 
 ## Step 7: Run Database Migrations
