@@ -12,13 +12,18 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "migrate:s3": "node scripts/migrate-to-s3.js",
+    "update:urls": "node scripts/update-database-urls.js"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.18.0",
     "@strapi/plugin-users-permissions": "5.18.0",
+    "@strapi/provider-upload-aws-s3": "^4.15.0",
     "@strapi/strapi": "5.18.0",
+    "aws-sdk": "^2.1692.0",
     "better-sqlite3": "11.3.0",
+    "dotenv": "^17.2.1",
     "pg": "^8.11.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
